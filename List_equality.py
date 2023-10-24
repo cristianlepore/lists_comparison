@@ -1,3 +1,7 @@
+#
+# Copyright (c) 2023 @cristianlepore
+#
+
 import os, re, csv
 
 type_society = ["SRL", "SPA", "SNC", "SA", "SAPA", "SAS", "SCRL", "SCPA", "SS", "SNCA", "SRLS", "SPAA", "SPAR", "SPAP", "SPAPA", "SRC", "LTD", "INC", "CO", "CORP", "LLC", "PLC"]
