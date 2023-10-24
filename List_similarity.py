@@ -1,3 +1,7 @@
+#
+# Copyright (c) 2023 @cristianlepore
+#
+
 import os, re, csv
 
 # Set your parameters:
