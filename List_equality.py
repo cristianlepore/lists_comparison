@@ -1,6 +1,6 @@
 import os, re, csv
 
-type_society = ["SRL", "SPA", "SNC", "SAPA", "SAS", "SCRL", "SCPA", "SS", "SNCA", "SRLS", "SPAA", "SPAR", "SPAP", "SPAPA", "SRC", "LTD", "INC", "CO", "CORP", "LLC", "PLC"]
+type_society = ["SRL", "SPA", "SNC", "SA", "SAPA", "SAS", "SCRL", "SCPA", "SS", "SNCA", "SRLS", "SPAA", "SPAR", "SPAP", "SPAPA", "SRC", "LTD", "INC", "CO", "CORP", "LLC", "PLC"]
 
 def get_absolute_path(file_name):
     # Ottieni il percorso assoluto del file
