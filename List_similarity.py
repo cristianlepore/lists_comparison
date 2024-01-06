@@ -5,9 +5,9 @@
 import os, re, csv
 
 # Set your parameters:
-similarity_grade = 0.55
-file_name_orbis = "orbisCSV.CSV"
-file_name_pitchbook = "PitchbookCSV.CSV"
+similarity_grade = 0.4
+file_name_toip = "ToIP.CSV"
+file_name_lsp = "LSP.CSV"
 
 type_society = ["SRL", "SPA", "SNC", "SA", "SAPA", "SAS", "SCRL", "SCPA", "SS", "SNCA", "SRLS", "SPAA", "SPAR", "SPAP", "SPAPA", "SRC", "LTD", "INC", "CO", "CORP", "LLC", "PLC"]
 
@@ -128,23 +128,23 @@ def write_to_file(name_file, elements):
             writer.writerow([element])
 
 def main():
-    list_orbis = read_file(file_name_orbis)
-    list_pitchbook = read_file(file_name_pitchbook)
+    list_toip = read_file(file_name_toip)
+    list_lsp = read_file(file_name_lsp)
 
-    results = find_similarity(list_orbis, list_pitchbook)
+    results = find_similarity(list_toip, list_lsp)
 
     # Specifica il nome del file CSV in cui desideri scrivere i dati
-    file_similarity = "Orbis_vs_Pitchbook.csv"
-    file_excluded_orbis = "Orbis_excluded.csv"
-    file_excluded_pitchbook = "Pitchbook_excluded.csv"
+    file_similarity = "toip_vs_lsp.csv"
+    file_excluded_orbis = "toip_excluded.csv"
+    file_excluded_pitchbook = "lsp_excluded.csv"
 
     write_to_file(file_similarity, results[0])
     write_to_file(file_excluded_orbis, results[1])
     write_to_file(file_excluded_pitchbook, results[2])
 
     print(f"Record simili: {len(results[0])}")    
-    print(f"Esclusi Orbis: {len(results[1])}")
-    print(f"Esclusi Pitchbook: {len(results[2])}")
+    print(f"Esclusi ToIP: {len(results[1])}")
+    print(f"Esclusi LSP: {len(results[2])}")
     
 if __name__ == "__main__":
     main()
